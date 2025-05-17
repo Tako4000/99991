@@ -1,4 +1,3 @@
-#WORKING :)
 #Blackjack how does it work? You might wonder if you have never played. The dealer gives you two random cards and himself two one face up and another faced down.
 import random
 
@@ -178,9 +177,9 @@ while Player_Plays:
         elif inp == "PASS":
             break
 
-        elif inp == "DOUBLE" and hits == 0:
-            double_down = True
+        elif inp == "DOUBLE" and hits == 0 and User.money > Bet:
             User.Bet(Bet)
+            double_down = True
             New_Card = Card(Card_lists)
             print(j +"\n"+ str(New_Card)+"\n"+ j)
             The_Player.append(New_Card)
